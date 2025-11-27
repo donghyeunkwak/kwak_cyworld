@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------
+   CYWORLD GLOBAL STYLE
+   ------------------------- */
+
+/* 전체 배경 스킨 */
+body {
+  @apply bg-[#f3f8ff];
+  /* 부드러운 싸이 배경 감성 */
+}
+
+/* 스크롤바 감성 (모바일/데스크탑 동일 적용) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-300 rounded-full;
+}
+
+/* 기본 폰트 분위기 */
+html {
+  font-family: ui-sans-serif, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+/* 페이지 전환 부드럽게 */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.25s ease;
+}
+
+/* CYWORLD SKY SKIN */
+:root {
+  --cy-sky: #eaf6ff;
+  --cy-border: #cfe6ff;
+  --cy-shadow: rgba(170, 200, 255, 0.45);
+}
+
+body {
+  background: var(--cy-sky);
+}
+
+/* 감성 박스 그림자 */
+.cy-box {
+  background: white;
+  border: 1px solid var(--cy-border);
+  box-shadow: 0 4px 10px var(--cy-shadow);
+  border-radius: 12px;
+}
+
+/* 감성 탭 강조 */
+.cy-tab-active {
+  color: #2274d0;
+  border-bottom: 2px solid #2274d0;
+  font-weight: 700;
+}
+
+/* CYWORLD GLASS EFFECT */
+.glass-box {
+  @apply bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-2xl;
+}
+
+.cy-tab-active {
+  @apply text-blue-700 font-bold border-b-2 border-blue-700;
+}
+
+/* NIGHT SKY BACKGROUND */
+.night-bg {
+  background: radial-gradient(circle at 20% 30%, #1b1b3a, #0f1020 70%);
+  background-attachment: fixed;
+  color: white;
+}
+
+/* GLASS EFFECT */
+.glass-box {
+  @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl rounded-2xl;
+}
+
+/* NEON ACTIVE TAB */
+.neon-active {
+  color: #76c7ff;
+  font-weight: 700;
+  text-shadow: 0 0 8px #76c7ff;
+  border-bottom: 2px solid #76c7ff;
+}
+
+/* STARS */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 20% 20%, white 50%, transparent 50%),
+    radial-gradient(2px 2px at 80% 40%, white 50%, transparent 50%),
+    radial-gradient(2px 2px at 50% 70%, white 50%, transparent 50%);
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.glass-pink {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(255, 182, 193, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* MORNING — 파스텔 오렌지/노을 */
+.bg-morning {
+  background: linear-gradient(to bottom, #ffd8c2, #ffe7d9, #ffd3e3);
+}
+
+/* DAY — 핑크 기본 테마 */
+.bg-day {
+  background: linear-gradient(to bottom, #ffe1f0, #ffd3e9, #ffcbe4);
+}
+
+/* EVENING — 진한 노을 */
+.bg-evening {
+  background: linear-gradient(to bottom, #ffb8c9, #ff9f96, #ff7b70);
+}
+
+/* NIGHT — 네이비 + 보라 + 핫핑크 */
+.bg-night {
+  background: linear-gradient(to bottom, #1a1d3a, #2a1f46, #3a1a4f);
+}
+
+/* 유리 UI 색감도 테마에 맞춰 투명하게 변경 */
+.glass-pink {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* NIGHT 모드일 때 glass는 약간 보라빛 */
+.bg-night .glass-pink {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 200, 255, 0.3);
+}
+
+/* EVENING 모드 glass는 살짝 레드빛 */
+.bg-evening .glass-pink {
+  background: rgba(255, 220, 220, 0.2);
+}
+
+/* Night mode neon text */
+.bg-night * {
+  color: #f8f8ff !important;
+  text-shadow: 0 0 4px rgba(255, 180, 255, 0.55),
+               0 0 8px rgba(255, 100, 200, 0.35);
+}
+
+/* 버튼/카드 안의 text는 조금 더 선명하게 */
+.bg-night .glass-pink * {
+  color: #ffffff !important;
+}
