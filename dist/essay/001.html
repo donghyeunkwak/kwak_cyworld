@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>T와 F의 대립, 내란견 VS 빨갱이</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #f3f5ff, #ffffff 55%, #eef4ff);
+      color: #111827;
+      line-height: 1.7;
+    }
+
+    /* 페이지 전체를 크게 쓰기 위해 padding 제거 */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    /* ---- Immersive Mode 핵심 ---- */
+    .post-card {
+      width: min(100%, 1400px);  /* 화면 크면 1400px까지만 */
+      background: #ffffff;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 60px 80px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .post-card {
+        padding: 32px 20px;
+      }
+    }
+
+    .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    .meta-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #2563eb;
+      font-weight: 500;
+    }
+
+    .post-title {
+      font-size: clamp(32px, 4vw, 42px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    .post-subtitle {
+      font-size: clamp(14px, 1.4vw, 18px);
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, #e5e7eb, #c7d2fe, #e5e7eb);
+      margin: 16px 0 26px;
+      opacity: 0.9;
+    }
+
+    article p {
+      margin-bottom: 14px;
+      font-size: clamp(16px, 1.3vw, 20px);
+      word-break: keep-all;
+      line-height: 1.75;
+    }
+
+    article p + p {
+      margin-top: 4px;
+    }
+
+    .highlight {
+      font-weight: 600;
+      background: linear-gradient(120deg, #eff6ff 0%, #fefce8 35%, #ffffff 100%);
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(191, 219, 254, 0.7);
+      margin-bottom: 16px;
+    }
+
+    .source-box {
+      font-size: 13px;
+      color: #6b7280;
+      background: #f9fafb;
+      border-radius: 14px;
+      padding: 10px 14px;
+      border: 1px dashed #d1d5db;
+      margin: 12px 0 18px;
+    }
+
+    .source-box a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .source-box a:hover {
+      text-decoration: underline;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: #6b7280;
+    }
+
+    .tag::before {
+      content: "#";
+      margin-right: 2px;
+      color: #9ca3af;
+    }
+
+    .footer-note {
+      margin-top: 26px;
+      font-size: 13px;
+      color: #9ca3af;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="post-card">
+      <header>
+        <div class="post-meta">
+          <span class="meta-pill">끄적끄적✍️, 곽씨의 이야기</span>
+          <span>에세이 · 정치, 사고 정리</span>
+        </div>
+
+        <h1 class="post-title">T와 F의 대립, 내란견 VS 빨갱이</h1>
+        <p class="post-subtitle">
+          논리(T)와 감정(F)이 충돌할 때, 우리는 어디에 서 있는가에 대한 개인적인 기록.
+        </p>
+      </header>
+
+      <div class="divider"></div>
+
+      <article>
+        <p>
+          예전부터 나는 인간의 갈등을 분석하는 과정에서 <strong>“T와 F의 대립”</strong>이라는
+          개념을 떠올렸다. T는 논리와 사실을 기반으로 판단하는 성향을, F는 감정과 가치관을 중심으로
+          결정을 내리는 성향을 의미한다. 이러한 개념이 단순한 개인 간의 차이를 넘어서, 정치적 대립에서도
+          동일하게 적용된다고 생각했다. 그리고 이번 비상계엄 사태를 보며, 이 개념이 더욱 선명하게 드러나는
+          것을 확인할 수 있었다.
+        </p>
+
+        <p>
+          비상계엄이 선포되자, 좌파와 우파는 극단적인 정치적 갈등 속에 빠져들었다. 좌파는 윤석열
+          대통령을 내란을 저지른 자의 동조범으로 간주했다. 반면, 우파는 좌파가 중공 세력의 위협을 감지하지
+          못하고 있다고 주장했다. 그 결과, 좌파는 우파를 내란을 지지하는 세력으로 비난했고, 우파는 좌파를
+          간첩과 동일시하며 빨갱이라고 조롱했다. 서로가 서로를 향해 증오의 언어를 퍼부었고, 논리적 토론보다는
+          감정적 대립이 깊어졌다.
+        </p>
+
+        <div class="source-box">
+          ‘윤석열 내란’ 6시간… 비상계엄 선포부터 해제까지<br />
+          출처: <a href="https://newstapa.org/article/zT41L" target="_blank" rel="noopener noreferrer">
+            newstapa.org
+          </a>
+        </div>
+
+        <p>
+          이런 상황 속에서 나는 블로그에 썼던 <strong>“T와 F의 대립”</strong>이 이번 사태에서도
+          적용된다고 느꼈다. 좌파 진영의 주장은 주로 감정적이고 가치판단적이었다. 내란이 있었다는 사실을
+          명확하게 입증하지 못한 채, <em>“만약 그렇다면(IF)”</em>이라는 가정 속에서 결론을 내리는
+          모습이 보였다.
+        </p>
+
+        <p>
+          반대로, 우파의 입장은 보다 논리적인 분석을 기반으로 이루어졌다. 예를 들어, 곽종근과 홍장원 두
+          사람의 진술이 변화했다는 점, 그리고 실제로 중국 자본과 관련된 위협이 존재한다는 객관적 사실을
+          제시하며 비상계엄의 정당성을 주장했다. 또한, 민주당의 예산 삭감과 더불어 간첩법 개정 반대와 관련된
+          안보 의식 또한 논리적인 분석에 기반한 것이었다.
+        </p>
+
+        <div class="source-box">
+          우두머리와 진실, 어느 쪽에 충성하는가<br />
+          [윤석열 탄핵심판 5·6차 변론기일] 몸 사린 이진우·여인형, 거침없는 홍장원, 일관된 곽종근… 갈라진 부하들<br />
+          출처:
+          <a href="https://h21.hani.co.kr" target="_blank" rel="noopener noreferrer">
+            h21.hani.co.kr
+          </a>
+        </div>
+
+        <p>
+          물론 나는 좌파 전체가 비논리적이라고 생각하지 않는다. 블로그에서도 밝혔듯이,
+          <strong>논리적인 좌파도 존재한다.</strong> 그러나 이번 사태를 바라보는 일부 좌파의 관점에서
+          볼 때, 그들의 논리는 허황된 추측에 의존하고 있었다. 내란의 동기를 확실한 증거 없이 추정하고,
+          내란 과정 역시 김어준, 곽종근, 홍장언의 주장에 의존하여 사실로 단정 짓는 경향이 강했다.
+        </p>
+
+        <p>
+          반면, 비상계엄의 정당성을 주장하는 측에서는 민주당의 줄 탄핵(연속된 탄핵 시도)이 헌재에서
+          기각되면서, 비상계엄의 명분이 정쟁의 의한 탄핵이였다는 점을 더욱 입증하고 있다고 본다.
+        </p>
+
+        <p>
+          과거엔 군사독재, 현재는 검사 독재라고 주장하는 이재명 더불어민주당 당 대표.
+        </p>
+
+        <p class="highlight">
+          결국, 이번 사태에서 가장 중요한 논점은 <strong>“비상계엄이 정당했는가”</strong>에 있다.
+          그것이 헌법상 중대한 법률 위반이었는지, 아니면 정당한 조치였는지에 대한 판단이 인용 또는
+          기각으로 갈릴 것이다. 만약 헌재가 법과 원칙을 기준으로 판단한다면, 기각하는 것이 정상적이라는
+          생각이 든다. 법과 원칙은 논리적 사고(T)의 영역에 속하며, 감정적 반응(F)에 의해 흔들려서는 안 되기
+          때문이다.
+        </p>
+
+        <p>
+          허나 법과 원칙의 영역대로 비상계엄의 정당성이 입증되지 못하면 인용될 수도 있다. 그렇기에 기각
+          또는 인용되더라도 양 진영은 법과 원칙에 따라 결과를 받아들여야 한다. 그렇지만 중요한 것은
+          인용이 된다 하더라도 <strong>가짜 뉴스에 의한 내란 프레임은 우리가 확실히 짚고 넘어가야
+          한다</strong>는 점이다.
+        </p>
+
+        <p class="highlight">
+          이번 사태를 통해 나는 다시 한번 정치적 갈등 속에서도 T와 F의 대립이 얼마나 강하게 작용하는지를
+          확인했다. 감정과 가정이 논리를 압도하는 순간, 사회는 극단적 대립 속으로 빠져든다. 그리고 이러한
+          대립 속에서 우리는 얼마나 법과 원칙을 지켜낼 수 있을까? 결국, 이 질문이 앞으로 우리가 답해야 할
+          가장 중요한 과제가 아닐까 싶다.
+        </p>
+      </article>
+
+      <div class="tag-row">
+        <span class="tag">정치</span>
+        <span class="tag">좌파</span>
+        <span class="tag">우파</span>
+        <span class="tag">T와F</span>
+        <span class="tag">mbti</span>
+        <span class="tag">윤석열</span>
+        <span class="tag">비상계엄</span>
+        <span class="tag">가짜뉴스</span>
+      </div>
+
+      <p class="footer-note">
+        곽씨의 이야기 · 개인적 시각이 담긴 수필입니다.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
